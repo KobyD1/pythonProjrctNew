@@ -1,0 +1,5 @@
+
+
+class DevicesPage(object):
+
+    pass
