@@ -2,13 +2,9 @@ import unittest
 
 
 class SearchForAnimal(unittest.TestCase):
-
-
     def setUp(self):
         print('into set up \n')
         a=0
-
-
     def test_1 (self):
         print('into test 1')
         assert 1 == 1 ,'1 in not 1 as exepcted '
@@ -33,7 +29,7 @@ class SearchForAnimal(unittest.TestCase):
     #     google_search = GoogleSearchPage(driver)
     #
     #     google_results.demo_results('Into Demo Of Google Results')
-    #     google_search.demo('Into Demo Of Google Search')
+    #     google_search.outputs('Into Demo Of Google Search')
     #     google_search.search_for_text("cat")
     #     google_selenium_base.selenium_end(driver)
     #

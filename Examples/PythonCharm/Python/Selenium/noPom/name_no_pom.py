@@ -10,7 +10,7 @@ driver.get("https://www.guru99.com/live-selenium-project.html")
 time.sleep(3)
 email = driver.find_element_by_id("awf_field-93653884")
 email.click()
-email.send_keys("test@demo.com")
+email.send_keys("test@outputs.com")
 submit = driver.find_element_by_name("submit")
 
 submit.click()

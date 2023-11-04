@@ -1,6 +1,6 @@
 from time import sleep
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.googleall.GoogleTests.BaseSelenium import BaseSelenium
 
 
 class swagLabs_avarage_byXpath(BaseSelenium):

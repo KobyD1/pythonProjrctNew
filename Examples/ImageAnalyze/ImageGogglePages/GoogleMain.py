@@ -4,24 +4,23 @@ from selenium.webdriver.common.by import By
 
 class GoogleMain(object):
 
-
     def __init__(self, driver):
         self.driver = driver
-        print ('into init')
+        print('into init')
 
     def demo(self):
-        print ('into demo at google main')
+        print('into outputs at google main')
 
-    def searchForPattern(self,pattern):
-        print ('into search for pattern')
+    def searchForPattern(self, pattern):
+        print('into search for pattern')
         try:
-            search =self.driver.find_element(By.NAME,"q")
+            search = self.driver.find_element(By.NAME, "q")
             search.click()
             search.clear()
             search.send_keys(pattern)
             search.send_keys(Keys.ENTER)
         except:
-            print ('exeption found')
+            print('exeption found')
 
         finally:
-            print ('into finally')
+            print('into finally')

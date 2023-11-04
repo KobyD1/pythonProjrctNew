@@ -1,13 +1,16 @@
 from time import sleep
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium import webdriver
+
 
 
 class BaseSeleniumCommon(object):
     def __init__(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        service = ChromeService(executable_path=ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service)
         self.driver = driver
 
 
@@ -46,7 +49,7 @@ class BaseSeleniumCommon(object):
         web_element.clear()
         web_element.sendKeys(pattern)
 
-    def login_to_swagLabs(self, user_text,pw_text):
+    def test_login_to_swagLabs(self, user_text,pw_text):
         user_element = self.driver.find_element(By.ID, 'user-name')
         pw_element = self.driver.find_element(By.ID, 'password')
         #set user

@@ -5,7 +5,7 @@ from selenium.webdriver import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.googleall.GoogleTests.BaseSelenium import BaseSelenium
 
 base_selenium = BaseSelenium()
 driver = base_selenium.selenium_init("https://connecteam.com/")

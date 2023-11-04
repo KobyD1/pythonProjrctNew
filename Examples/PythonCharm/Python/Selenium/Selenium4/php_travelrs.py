@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.googleall.GoogleTests.BaseSelenium import BaseSelenium
 
 base_selenium = BaseSelenium()
 driver = base_selenium.selenium_init("https://phptravels.net/")

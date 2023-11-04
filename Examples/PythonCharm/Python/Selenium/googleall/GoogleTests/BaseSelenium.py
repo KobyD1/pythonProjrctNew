@@ -1,15 +1,13 @@
 from time import sleep
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium import webdriver
 
 
 class BaseSelenium(object):
     def __init__(self):
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        service = ChromeService(executable_path=ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service)
         self.driver = driver
 
 
@@ -23,7 +21,9 @@ class BaseSelenium(object):
         sleep(3)
         return driver
 
-
+    def test_end(self):
+        self.driver.close()
+        print ("Test End")
 
 
 

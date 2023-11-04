@@ -5,9 +5,9 @@ from selenium.webdriver import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.Selenium4.BaseSeleniumCommon import BaseSeleniumCommon
 
-base_selenium = BaseSelenium()
+base_selenium = BaseSeleniumCommon()
 driver = base_selenium.selenium_init("https://www.google.com/")
 
 input = driver.find_element(By.NAME,'q')

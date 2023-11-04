@@ -2,8 +2,8 @@ import unittest
 
 import pytest
 
-from PythonCharm.Python.Selenium.googleall.GogglePages.GoogleMain import GoogleMain
-from PythonCharm.Python.Selenium.googleall.GoogleTests.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.googleall.GogglePages.GoogleMain import GoogleMain
+from Examples.PythonCharm.Python.Selenium.googleall.GoogleTests.BaseSelenium import BaseSelenium
 
 
 def setUp(self):

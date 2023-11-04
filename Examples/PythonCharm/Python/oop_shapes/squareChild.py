@@ -5,5 +5,5 @@ class squareChild(ShapeParent):
     def __init__(self):
         print ('into square')
 
-    def get_color_from_db(self,color):
+    def get_area_from_db(self,color):
         print ('getting color from DB , color = '+color)

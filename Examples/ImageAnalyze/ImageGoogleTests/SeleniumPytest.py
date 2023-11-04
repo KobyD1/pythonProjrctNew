@@ -1,7 +1,7 @@
 import unittest
 
 from Examples.ImageAnalyze.ImageGogglePages.GoogleMain import GoogleMain
-from Examples.ImageAnalyze.ImageGoogleTests.BaseSelenium import BaseSelenium
+from Examples.ImageAnalyze.common.BaseSelenium import BaseSelenium
 
 class SeleniumPytest(unittest.TestCase,BaseSelenium):
 

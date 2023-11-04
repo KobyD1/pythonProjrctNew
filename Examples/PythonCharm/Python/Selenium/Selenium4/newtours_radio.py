@@ -2,7 +2,6 @@ from time import sleep
 
 from selenium.webdriver.common.by import By
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
 
 
 class newtours_link(BaseSelenium):

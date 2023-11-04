@@ -1,3 +1,0 @@
-pytest-play=2.3.1
-Playwright=1.35.0
-pytest=7.3.2
