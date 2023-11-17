@@ -2,13 +2,12 @@ BASE_URL = "http://www.airbnb.com"
 LOCATION = "Amsterdam, Netherlands"
 EXP_ADULTS = 2
 EXP_CHILDREN = 1
-FROM_DELTA = 1
-TO_DELTA = 2
-BROWSER = 1 # 1- for Chrome , 2- for Firefox
+FROM_DELTA = 1  # checkin day range from today (in days)
+BROWSER = 1  # 1- for Chrome , 2- for Firefox
 main_search = {
     "location": LOCATION,
     "from_delta": FROM_DELTA,
-    "to_delta": TO_DELTA,
+    "to_delta": FROM_DELTA + 1,
     "adults": EXP_ADULTS,
     "children": EXP_CHILDREN
 }
@@ -16,7 +15,7 @@ main_search = {
 dates_test_search = {
     "location": LOCATION,
     "from_delta": FROM_DELTA,
-    "to_delta": TO_DELTA+4,
+    "to_delta": FROM_DELTA + 7,
     "adults": EXP_ADULTS,
     "children": EXP_CHILDREN
 }
@@ -24,7 +23,7 @@ dates_test_search = {
 guest_test_search = {
     "location": LOCATION,
     "from_delta": FROM_DELTA,
-    "to_delta": TO_DELTA+7,
+    "to_delta": FROM_DELTA + 1,
     "adults": EXP_ADULTS,
     "children": 0
 }

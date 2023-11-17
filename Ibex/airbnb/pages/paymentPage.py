@@ -1,13 +1,8 @@
-import calendar
-import time
-
-from playwright.sync_api import expect
-from datetime import datetime, timedelta
-
-from retry import retry
 
 
-class PaymentPage:
+
+class paymentPage:
+
     def __init__(self, page):
         self.__page = page
 

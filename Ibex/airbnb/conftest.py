@@ -1,7 +1,7 @@
 import pytest
 from playwright.sync_api import sync_playwright, expect
 
-from Ibex.airbnb.pages.paymentPage import PaymentPage
+from Ibex.airbnb.pages.paymentPage import paymentPage
 from Ibex.airbnb.pages.resultsPage import resultsPage
 from Ibex.airbnb.pages.placePage import placePage
 from Ibex.airbnb.pages.commonPages import commonPages
@@ -21,7 +21,7 @@ def setup_browser():
         common_pages = commonPages(page)
         results_page = resultsPage(page)
         place_Page = placePage(page)
-        payment_page = PaymentPage(page)
+        payment_page = paymentPage(page)
         common_pages.set_translator()
 
         yield common_pages, results_page, place_Page, payment_page

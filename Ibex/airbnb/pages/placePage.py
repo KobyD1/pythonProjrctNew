@@ -1,9 +1,6 @@
-import calendar
-import time
+
 
 from playwright.sync_api import expect
-from datetime import datetime, timedelta
-
 from Ibex.airbnb.common.utils import Utils
 
 
@@ -29,7 +26,7 @@ class placePage:
         date_to = self.__utils.get_date_as_string(exp_details["to_delta"])
         checkin = self.__checkin_button.text_content()
         checkout = self.__checkout_button.text_content()
-        assert (checkin,checkout) == (date_from["all"],date_to["all"]), "One or more checkout or checkin details is not as define"
+        assert (checkin,checkout) == (date_from["all"],date_to["all"]), "One or more checkout or checkin details is not as defined"
 
 
     def get_and_assert_booking_guests(self, exp_details: dict):
@@ -37,7 +34,7 @@ class placePage:
         index_guests = act_guests.index(" ")
         act_guests_as_int = int(act_guests[:index_guests])
         exp_guests = exp_details["adults"] + exp_details["children"]
-        assert act_guests_as_int >= exp_guests, "Guest amount into reservation is not as expected "
+        assert act_guests_as_int >= exp_guests, "Guest amount into reservation is not as defined "
 
     def click_on_reserved(self):
         print ("Reservation details setting success - navigate to payment page")

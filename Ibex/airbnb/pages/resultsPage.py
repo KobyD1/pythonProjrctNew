@@ -1,10 +1,5 @@
-import calendar
-import time
-
 from playwright.sync_api import expect
-
 from retry import retry
-
 from Ibex.airbnb.tests.globals import BASE_URL
 
 
@@ -30,7 +25,7 @@ class resultsPage:
             for place_data in places_data:
                 index += 1
                 room_text = place_data.text_content()
-                if ("(" in room_text):  # some cases are not include rates
+                if (("(" in room_text) and ("breakdown" in room_text)):  # some cases are not include rates
                     index_end = room_text.rindex("(") - 1
                     index_start = room_text.index("breakdown") + 9
                     room_rate = room_text[index_start:index_end]

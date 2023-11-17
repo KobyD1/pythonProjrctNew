@@ -1,12 +1,6 @@
-import calendar
 import time
 
 from playwright.sync_api import expect
-from datetime import datetime, timedelta
-
-from retry import retry
-
-from Ibex.airbnb.common import utils
 from Ibex.airbnb.common.utils import Utils
 
 
@@ -24,7 +18,6 @@ class commonPages:
         self.__adults_value = self.__page.get_by_test_id('stepper-adults-value')
         self.__children_value = self.__page.get_by_test_id('stepper-children-value')
         self.__where_button = self.__page.locator("[id='bigsearch-query-location-input']")
-        self.month_table = self.__page.locator("div[class*='d1hw4v9n']")
         self.__search_icon = self.__page.get_by_test_id('structured-search-input-search-button')
         self.__translator_icon = self.__page.locator("button.cqfm6nt.c177491c.dir.dir-ltr")
         self.__auto_translate = self.__page.locator("div.s195dsor.sl9yi1h.dir.dir-ltr")
@@ -54,7 +47,7 @@ class commonPages:
         date = self.__utils.get_date_as_string(delta)
         act_month = self.__page.get_by_text(date["month"] + " " + date["year"])
         if act_month.is_visible():
-            print(f"Month and year set as expected no need to change it")
+            print(f"Month and year appears into select date menu")
         else:
             assert False("Dates are not visible - please change your time range")
 
@@ -65,7 +58,7 @@ class commonPages:
     def click_on_search(self):
         self.__search_icon.click()
         expect(self.__search_icon).not_to_be_visible()
-        time.sleep(3)  # the smart wait is not effective
+        time.sleep(3)  # the smart wait is not stable
 
     def set_guests(self, exp_adults: int, exp_children: int):
         print(f"Try to set guests according adults ={exp_adults}, children = {exp_children}")
@@ -76,6 +69,7 @@ class commonPages:
         act_children = self.__children_value.text_content()
         adults_delta = exp_adults - int(act_adults)
         children_delta = exp_children - int(act_children)
+        print(f"set new guests values ,according adults ={adults_delta}, children = {children_delta}")
 
         for i in range(adults_delta):
             self.__increase_adults.click()

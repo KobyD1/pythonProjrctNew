@@ -1,7 +1,7 @@
 import pytest
 
-from Ibex.airbnb.tests.globals import LOCATION, FROM_DELTA, TO_DELTA, EXP_CHILDREN, EXP_ADULTS, main_search, \
-    guest_test_search, dates_test_search
+from Ibex.airbnb.tests.globals import  main_search, guest_test_search, dates_test_search
+
 
 @pytest.mark.flaky(reruns=2)
 class TestAirbnb():
@@ -22,7 +22,7 @@ class TestAirbnb():
         high_rate_index = results_page.get_and_sort_place_data()
         results_page.get_room_by_href(high_rate_index)
         place_page.prapare_to_search_guests()
-        common_pages.set_guests(2, 0)
+        common_pages.set_guests(guest_test_search["adults"], guest_test_search["children"])
         common_pages.click_on_search()
 
         high_rate_index = results_page.get_and_sort_place_data()
