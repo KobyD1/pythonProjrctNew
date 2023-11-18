@@ -15,7 +15,6 @@ class welcomeBookingPage(object):
         self.search_menu = self.driver.find_element(By.ID,":re:")
 
 
-
     def click_on_search_menu(self,text):
         self.search_menu.click()
         self.search_menu.send_keys(text)
