@@ -19,7 +19,8 @@ user = {
 def test_get_status_code():
     response =requests.get(url_base+'pet/1245')
     assert  response.status_code == 200
-    response.json()
+    json = response.json()
+    print ("Test End")
 
 
 def test_get_body():

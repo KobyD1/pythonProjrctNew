@@ -2,8 +2,7 @@ from time import sleep
 
 from selenium.webdriver.common.by import By
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
-
+from Examples.PythonCharm.Python.Selenium.googleall.GoogleTests.BaseSelenium import BaseSelenium
 
 base = BaseSelenium()
 driver = base.selenium_init("https://demoqa.com/books")

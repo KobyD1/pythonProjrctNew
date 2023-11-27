@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.Selenium4.BaseSeleniumCommon import BaseSeleniumCommon
 
-base_selenium = BaseSelenium()
+base_selenium = BaseSeleniumCommon()
 driver = base_selenium.selenium_init("https://demo.guru99.com/test/newtours/reservation.php")
 from_port=driver.find_element(By.NAME,"fromPort")
 drop_down_from_port=Select(from_port)

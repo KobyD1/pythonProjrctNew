@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
+from Examples.PythonCharm.Python.Selenium.Selenium4.BaseSeleniumCommon import BaseSeleniumCommon
 
 
 class find_elements:
-    base_selenium=BaseSelenium("https://www.saucedemo.com/")
+    base_selenium=BaseSeleniumCommon("https://www.saucedemo.com/")
 
     driver = base_selenium.selenium_init()
 

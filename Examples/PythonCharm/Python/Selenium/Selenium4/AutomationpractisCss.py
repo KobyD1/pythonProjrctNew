@@ -3,10 +3,9 @@ import math
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
-from PythonCharm.Python.Selenium.Selenium4.BaseSelenium import BaseSelenium
 
 
-class AutomationpractisLink(BaseSelenium):
+class AutomationpractisLink(BaseSeleniumCommon):
     base=BaseSelenium()
     driver= base.selenium_init("https://www.saucedemo.com/")
     base.login_to_swagLabs("standard_user","secret_sauce")

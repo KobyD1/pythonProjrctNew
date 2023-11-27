@@ -2,7 +2,6 @@ import time
 import unittest
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.common.by import By
 from appium.webdriver.common.touch_action import TouchAction
 
 
@@ -28,7 +27,7 @@ class TestAppium(unittest.TestCase):
     def test_calculate_tap(self) :
         print('into test')
         digit2 = self.driver.find_element(by=AppiumBy.ID, value='com.android.calculator2:id/digit_2')
-        digit1 = self.driver.find_element(By.ID, 'com.android.calculator2:id/digit_1')
+        digit1 = self.driver.find_element(by=AppiumBy.ID, value='com.android.calculator2:id/digit_1')
 
         actions = TouchAction(self.driver)
         actions.tap(digit2)

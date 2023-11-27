@@ -40,6 +40,17 @@ class ImageExample(unittest.TestCase, BaseSelenium):
         self.base.selenium_end()
         assert is_equals == True, 'mismatch found at compare images'
 
+    def test_image_compare_change_position(self):
+        path_ref_image = "../Images/Ref/Google/logo2.png"
+
+        coardination = {
+            'x': 622,
+            'y': 51
+        }
+        is_equals = self.images_utils.compare_image_coardinations(path_ref_image, coardination, 'change_position')
+        self.base.selenium_end()
+        assert is_equals == True, 'mismatch found at compare images'
+
     def test_image_compare_list(self):
         images = [(630, 25, "../Images/Ref/Google/logo2.png"),(625, 50, "../Images/Ref/Google/logo2.png"), (625, 50, "../Images/Ref/Google/logo2_error.png")]
         is_equals = self.images_utils.compare_image_list(images, 'list')
