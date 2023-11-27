@@ -26,6 +26,8 @@ class placePage:
         date_to = self.__utils.get_date_as_string(exp_details["to_delta"])
         checkin = self.__checkin_button.text_content()
         checkout = self.__checkout_button.text_content()
+        date_from["all"] = self.prapare_date_to_compare(date_from["all"])
+        date_to["all"] = self.prapare_date_to_compare(date_to["all"])
         assert (checkin,checkout) == (date_from["all"],date_to["all"]), "One or more checkout or checkin details is not as defined"
 
 
@@ -49,3 +51,10 @@ class placePage:
         expect(self.__search_guest).to_be_visible()
         self.__page.query_selector_all(self.__search_dates_selector)[1].click()
         self.__clear_dates.click()
+
+    def prapare_date_to_compare(self,date:str)->str:
+        if ("/0" in date):
+            date = date.replace("/0", "/")
+        if (date[0] == "0"):
+            date = date[1:]
+        return date
