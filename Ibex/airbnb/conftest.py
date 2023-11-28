@@ -1,10 +1,10 @@
 import pytest
 from playwright.sync_api import sync_playwright, expect
 
-from Ibex.airbnb.pages.paymentPage import paymentPage
-from Ibex.airbnb.pages.resultsPage import resultsPage
-from Ibex.airbnb.pages.placePage import placePage
-from Ibex.airbnb.pages.commonPages import commonPages
+from Ibex.airbnb.pages.common_pages import commonPages
+from Ibex.airbnb.pages.payment_page import paymentPage
+from Ibex.airbnb.pages.place_page import placePage
+from Ibex.airbnb.pages.results_page import resultsPage
 from Ibex.airbnb.tests.globals import BASE_URL, BROWSER
 
 
