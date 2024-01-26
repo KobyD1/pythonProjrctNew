@@ -6,6 +6,9 @@ class welcomePage():
         self.__news = self.__page.locator("[href='/categories/football-news']")
         self.__transfer = self.__page.locator("[href='/categories/transfer']")
         self.__premier = self.__page.get_by_text("Premier")
+        self.__women = self.__page.locator("[href='/teams/england-women']")
+        self.__champions_league = self.page.get_by_text("Champions League News")
+
 
 
     def verify_for_news(self,exp_text):
@@ -23,4 +26,3 @@ class welcomePage():
         print ("Start testing for Primier Leage up menu")
         text  = self.__premier.text_content()
         assert exp_text == text
-        # mm-root > header > div.headerFirstRow_ednzzn > div.subMenuWrapper_tkhkkr > div._hi77gs
