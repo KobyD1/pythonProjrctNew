@@ -6,7 +6,7 @@ from Examples.PlayWright.googleExampleAll.pages.ResultsPage import ResultsPage
 from Examples.PlayWright.googleExampleAll.tests.globals import BASE_URL
 
 @pytest.fixture()
-def setup_ebay():
+def setup_google():
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=False)
         page = browser.new_page()

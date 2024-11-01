@@ -22,7 +22,7 @@ def setup_browser():
         results_page = resultsPage(page)
         place_Page = placePage(page)
         payment_page = paymentPage(page)
-        common_pages.set_translator()
+        # common_pages.set_translator()
 
         yield common_pages, results_page, place_Page, payment_page
         page.close()
