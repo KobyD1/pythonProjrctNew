@@ -1,11 +1,12 @@
 import pytest
-from playwright.sync_api import sync_playwright
 
 from aiola.xyz_bank.commons.globals import URL_BANK, BROWSER
 from aiola.xyz_bank.pages.login_page import loginPage
 from aiola.xyz_bank.pages.transactions_page import transactionsPage
 from aiola.xyz_bank.pages.users_page import  usersPage
 from aiola.xyz_bank.pages.welcome_page import welcomePage
+from playwright.sync_api import sync_playwright, expect
+
 
 
 @pytest.fixture()
