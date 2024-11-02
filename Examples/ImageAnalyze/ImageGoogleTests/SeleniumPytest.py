@@ -18,13 +18,10 @@ class SeleniumPytest(unittest.TestCase,BaseSelenium):
 
 
     def test_google_cat(self):
-
         self.main.searchForPattern("cat")
 
     def test_google_dog(self):
-        base=BaseSelenium()
-        driver= base.selenium_init("https://www.google.com")
-        main=GoogleMain(driver)
+        main=GoogleMain(self.driver)
         main.searchForPattern("Dog")
 
 
