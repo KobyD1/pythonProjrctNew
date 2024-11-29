@@ -14,5 +14,5 @@ def test_get_query_source():
                 live_in_query_counter += 1
 
     f.close()
-    print (f"{live_in_query_counter} found of total {rows_counter} rows")
+    print (f"{live_in_query_counter} with query to {value_to_find} found of total {rows_counter} rows ")
     print ("test end")
