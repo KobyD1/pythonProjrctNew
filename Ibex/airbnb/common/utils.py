@@ -1,7 +1,6 @@
 import calendar
 from datetime import datetime, timedelta
 
-
 class Utils():
     def __init__(self, page):
         self.__page = page
@@ -18,3 +17,6 @@ class Utils():
             "year": year
         }
         return date
+
+    def demo(self):
+        pass
