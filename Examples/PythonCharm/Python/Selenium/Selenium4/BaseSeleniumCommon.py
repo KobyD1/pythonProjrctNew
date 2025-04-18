@@ -47,7 +47,7 @@ class BaseSeleniumCommon(object):
         print ('Try to send keys to web element ')
         web_element.click()
         web_element.clear()
-        web_element.sendKeys(pattern)
+        web_element.send_keys(pattern)
 
     def test_login_to_swagLabs(self, user_text,pw_text):
         user_element = self.driver.find_element(By.ID, 'user-name')

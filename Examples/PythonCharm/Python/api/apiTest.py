@@ -52,7 +52,17 @@ def test_post():
    response_code = response.status_code
    assert response_code == 200
 
+def test_post_v():
+   url = "http://mock-api-env.eba-7vxf99wf.us-east-1.elasticbeanstalk.com/v1/login"
+   user = {
+  "username": "vectorious@medtech.com",
+ "password": "Aa123456"
 
+
+ }
+   response = requests.post(url,headers=headers, data=json.dumps(user))
+   response_code = response.status_code
+   assert response_code == 200
 def test_post_update():
 
    response = requests.post(url_base+'user',headers=headers, data=json.dumps(user))
