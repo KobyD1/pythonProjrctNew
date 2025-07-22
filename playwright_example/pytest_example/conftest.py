@@ -1,19 +1,21 @@
 import pytest
 from playwright.sync_api import sync_playwright, expect
-from Examples.PlayWright.pageObject.tests.constants import BASE_URL
+
+
+expect.set_options(timeout=10_000)
+
 
 @pytest.fixture()
-def setup_ebay():
+def setup_playwright():
+    print("### Test start ###")
+
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=False)
         page = browser.new_page()
-        page.goto(BASE_URL)
+
+        # welcome_page = welcomePage(page)
+        # product_page = productPage(page)
         yield page
+        print("### Test end ###")
         page.close()
         browser.close()
-
-
-def test(setup_ebay):
-    page = setup_ebay
-    print(setup_ebay)
-    expect(page).to_have_url("https://www.ebay.com/")
