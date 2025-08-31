@@ -10,11 +10,17 @@ class seleniumCommon():
         service = ChromeService(executable_path=ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service)
         self.driver = driver
+        driver.implicitly_wait(10)
         driver.maximize_window()
         driver.get(url)
         return driver
 
     def selenium_end (self):
         self.driver.close()
+
+    def click_and_send_keys(self,element , text):
+        element.click()
+        element.clear()
+        element.send_keys(text)
 
         print ("test End")
