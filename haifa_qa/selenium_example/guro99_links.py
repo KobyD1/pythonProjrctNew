@@ -14,7 +14,9 @@ user = driver.find_element(By.NAME,"uid")
 password = driver.find_element(By.NAME,"password")
 common.click_and_send_keys(user,"frffd")
 common.click_and_send_keys(password,"dsssdsd")
+
 login_button = driver.find_element(By.NAME,"btnLogin")
+
 login_button.click()
 
 
