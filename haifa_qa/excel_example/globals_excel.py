@@ -1,1 +1,0 @@
-FILE_NAME = "results_qa_haifa.csv"
