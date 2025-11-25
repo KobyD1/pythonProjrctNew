@@ -27,6 +27,7 @@ class eBayPytest(unittest.TestCase):
         exp_url = self.driver.current_url
         assert exp_url == "https://www.ebay.com/sch/ebayadvsearch","URL did not changed as expected after click on Adv. button"
 
+
     def test_keyword_at_advanced(self):
         print ("Into Keyword in Advanced ")
         self.driver.find_element(By.LINK_TEXT, "Advanced").click()
