@@ -17,7 +17,9 @@ driver.get('https://www.calculator.net/')
 age_link = driver.find_element(By.LINK_TEXT,"Age Calculator")
 age_link.click()
 
+driver.find_element(By.PARTIAL_LINK_TEXT,"FITNESS").click()
 
-
+url = driver.current_url
+print(url)
 
 driver.close()
