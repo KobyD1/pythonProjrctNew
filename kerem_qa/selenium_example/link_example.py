@@ -22,4 +22,10 @@ driver.find_element(By.PARTIAL_LINK_TEXT,"FITNESS").click()
 url = driver.current_url
 print(url)
 
+if (url == 'https://www.calculator.net/fitness-and-health-calculator.html'):
+    print ("Test OK -URL as expected")
+
+else:
+    print ("#####Test FAILED -URL not as expected######")
+
 driver.close()
