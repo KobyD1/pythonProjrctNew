@@ -17,6 +17,15 @@ class SeleniumPytest(unittest.TestCase):
         print('teat down')
         self.base.selenium_end()
 
+    def test_login_by_css(self):
+        user_name = self.driver.find_element(By.CSS_SELECTOR,"input[class*='input_error form_input']")
+        user_name.send_keys("standard_user")
+        password = self.driver.find_element(By.CSS_SELECTOR,"input[placeholder='Password']")
+        password.send_keys("secret_sauce")
+
+        print ("Test end")
+
+
     def test_login(self):
         user = self.driver.find_element(By.ID, "user-name")
         password = self.driver.find_element(By.NAME, "password")
