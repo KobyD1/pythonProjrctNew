@@ -20,4 +20,4 @@ if (url == 'https://www.nike.com/il/retail'):
 else:
     print("#####Test FAILED - URL not as expected######")
 
-driver.close()
+base.selenium_stop()
