@@ -1,6 +1,5 @@
 import time
 import unittest
-import pytest
 from selenium.webdriver.common.by import By
 from kerem_qa.selenium_example.seleniumBaseDalya import seleniumBaseDalya
 
@@ -13,7 +12,6 @@ class pytest_swaglabs(unittest.TestCase):
     def tearDown(self):
         self.base.selenium_stop()
 
-    @pytest.mark.flaky(reruns=2)
     def test_login_correct_details(self):
         print("Into test login")
         user = self.driver.find_element(By.ID, "user-name")
@@ -23,6 +21,6 @@ class pytest_swaglabs(unittest.TestCase):
         user.send_keys("standard_user")
         password.send_keys("secret_sauce")
         login_button.click()
-        time.sleep(2)   # example of delay
+        time.sleep(3)   # example of delay
         url = self.driver.current_url
         assert url == "https://www.saucedemo.com/inventory.html","URL did not chnged after login success "
