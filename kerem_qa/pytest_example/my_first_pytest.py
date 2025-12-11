@@ -19,13 +19,15 @@ class myFirstPytest(unittest.TestCase):
         summery = self.num1 + self.num2
 
 
-        assert summery==12,"our code did not suport summery "
+        assert summery==5,"our code did not suport summery "
         result=summery*2
         print (result)
 
     def test_multiple(self):
-
+        num3=5
+        num4=9
         multiple = self.num1 * self.num2
-        assert multiple==28,"our code did not suport multiple "
+        multiple2 = num3 * num4
+        assert multiple==7,"our code did not suport multiple "
 
 

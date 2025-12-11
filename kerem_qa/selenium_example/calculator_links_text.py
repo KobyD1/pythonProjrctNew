@@ -6,6 +6,7 @@ base = seleniumBaseDalya()
 exp_link = "Payment Calculator"
 driver = base.selenium_start_with_url("https://www.calculator.net/")
 buttons=driver.find_elements(By.PARTIAL_LINK_TEXT,"Calculator")
+
 math_button = driver.find_elements(By.LINK_TEXT,"Math")
 if len(math_button)>0:
     math_button.click()

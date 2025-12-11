@@ -18,6 +18,10 @@ age_link = driver.find_element(By.LINK_TEXT,"Age Calculator")
 age_link.click()
 
 driver.find_element(By.PARTIAL_LINK_TEXT,"FITNESS").click()
+text = driver.find_element(By.PARTIAL_LINK_TEXT,"FITNESS").text
+
+if (text.__contains__("&")):
+    print (F"Fitnees button define as expected the text is {text}")
 # example how to get URL
 url = driver.current_url
 print(url)
