@@ -3,7 +3,6 @@ import unittest
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-
 from kerem_qa.selenium_example.seleniumBaseDalya import seleniumBaseDalya
 
 
@@ -27,5 +26,15 @@ class advDemoTest(unittest.TestCase):
 
         category_as_drop_down.select_by_index(2)
         category_as_drop_down.select_by_visible_text("Mice")
+
+        product  = Select(self.driver.find_element(By.NAME,"productListboxContactUs"))
+        product.select_by_index(2)
+        email = self.driver.find_element(By.NAME,"emailContactUs")
+        email.send_keys("demo@gmail.com")
+        subject = self.driver.find_element(By.NAME,"subjectTextareaContactUs")
+        subject.send_keys("Hi please provide details")
+
+        send = self.driver.find_element(By.ID,"send_btn")
+
         print ("into test")
 
