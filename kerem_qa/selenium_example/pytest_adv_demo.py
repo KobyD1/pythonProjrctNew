@@ -21,13 +21,15 @@ class advDemoTest(unittest.TestCase):
         time.sleep(3)
         contact_us = self.driver.find_element(By.PARTIAL_LINK_TEXT,"CONTACT")
         contact_us.click()
+
         category = self.driver.find_element(By.NAME,"categoryListboxContactUs")
         category_as_drop_down = Select(category)
 
-        category_as_drop_down.select_by_index(2)
         category_as_drop_down.select_by_visible_text("Mice")
 
         product  = Select(self.driver.find_element(By.NAME,"productListboxContactUs"))
+        time.sleep(3)
+
         product.select_by_index(2)
         email = self.driver.find_element(By.NAME,"emailContactUs")
         email.send_keys("demo@gmail.com")
