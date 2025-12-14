@@ -27,3 +27,12 @@ class seleniumBaseDalya():
     def selenium_stop(self):
         print("**** Test stop ****")
         self.driver.close()
+
+    def click_and_assert_on_element (self,element):
+        print ("Clicking on element")
+        is_selected = element.is_selected()
+        if is_selected == False:
+            element.click()
+        after = element.is_selected()
+        assert after == True , "After clicking on element is not as expected"
+        return after
