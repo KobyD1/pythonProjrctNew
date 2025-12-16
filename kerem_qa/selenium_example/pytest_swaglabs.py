@@ -43,3 +43,14 @@ class pytest_swaglabs(unittest.TestCase):
         sort_as_drop_down.select_by_index(3)
         print ("ffgf")
 
+
+    def test_css_example(self):
+        print("Into test login")
+        user = self.driver.find_element(By.CSS_SELECTOR, "input[class='input_error form_input']")
+        user.send_keys("standard_user")
+        password = self.driver.find_element(By.CSS_SELECTOR, "input[data-test='password']")
+        password.send_keys("secret_sauce")
+        login_button = self.driver.find_element(By.CSS_SELECTOR, "input[class='submit-button btn_action']")
+        login_button.click()
+        print ("trest end ")
+
