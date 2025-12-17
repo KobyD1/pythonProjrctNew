@@ -18,4 +18,5 @@ class sanityTest(unittest.TestCase):
 
     def test_login_with_correct_parameeters(self):
         print ("into login with correct parameters test")
+        self.login_page.set_user_and_password("standard_user","secret_sauce")
         self.login_page.click_on_login_button()
