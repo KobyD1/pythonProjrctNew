@@ -11,12 +11,21 @@ search_button = driver.find_element(By.ID,"gh-search-btn")
 search_button.click()
 price_all = driver.find_element(By.CLASS_NAME,"su-card-container__attributes.su-card-container__attributes--has-secondary")
 print (price_all.text)
+price_all_text = price_all.text
 
-index_1 = price_all.text.index("+ILS")+4
-index_2 = price_all.text.index("delivery")
-delivery_price = price_all.text[index_1:index_2]
-delivery_price=delivery_price.strip()
-print (delivery_price)
+if ("delivery" in price_all_text):
+    index_1 = price_all.text.index("+ILS")+4
+    index_2 = price_all.text.index("delivery")
+    delivery_price = price_all.text[index_1:index_2]
+    delivery_price=delivery_price.strip()
+    print (delivery_price)
+
+if ("shipping" in price_all_text):
+    index_1 = price_all.text.index("+ILS")+4
+    index_2 = price_all.text.index("shipping")
+    delivery_price = price_all.text[index_1:index_2]
+    delivery_price=delivery_price.strip()
+    print (delivery_price)
 
 
 
