@@ -1,4 +1,7 @@
+c= 12
+
 # block to sample
+
 try :
     a = 10
     b = 5
@@ -6,8 +9,11 @@ try :
     num2 = a -b
     summery = num1/num2
 
-    # what I looking for
+  # examples of except
+# except NoSuchElementException:
+# except Exception as e:
 
+# what I looking for
 except ZeroDivisionError:
     print ("Division by zero event found ")
     num2 =1
