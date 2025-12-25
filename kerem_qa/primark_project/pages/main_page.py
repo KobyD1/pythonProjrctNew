@@ -19,6 +19,9 @@ class MainPage:
         button.click()
         return button_text
 
+    def click_on_cart_button(self):
+        self.driver.find_element(By.ID,"shopping-bag-link").click()
+
 
 
 
