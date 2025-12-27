@@ -18,7 +18,6 @@ class allTests(unittest.TestCase):
         self.base.selenium_stop()
 
 
-
     def test_click_on_gift_card_button(self):
         button_text = self.main_page.click_button_and_get_text("Gift")
         assert button_text == "Gift Card","Gift card button text is not as expected"

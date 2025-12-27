@@ -18,6 +18,7 @@ if ("delivery" in price_all_text):
     index_2 = price_all.text.index("delivery")
     delivery_price = price_all.text[index_1:index_2]
     delivery_price=delivery_price.strip()
+    delivery_price=delivery_price.replace(".","#")
     print (delivery_price)
 
 if ("shipping" in price_all_text):

@@ -1,4 +1,4 @@
-from persons_oop.student import Student
+from kerem_qa.persons_oop.student import Student
 
 student_1 = Student("John", "Doe1")
 student_2 = Student("Mike", "Doe2")

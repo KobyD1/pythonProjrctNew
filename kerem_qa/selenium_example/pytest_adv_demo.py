@@ -37,6 +37,9 @@ class advDemoTest(unittest.TestCase):
         subject.send_keys("Hi please provide details")
 
         send = self.driver.find_element(By.ID,"send_btn")
+        is_displayed = send.is_displayed()
+        assert is_displayed == True , "Send button did not displayed as expected"
+
 
         print ("into test")
 

@@ -1,6 +1,5 @@
 import time
 import unittest
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from kerem_qa.selenium_example.seleniumBaseDalya import seleniumBaseDalya
@@ -17,7 +16,7 @@ class advDemoTest(unittest.TestCase):
         self.base.selenium_stop()
 
     def test_checkbox_example(self):
-        adv = self.driver.find_element(By.PARTIAL_LINK_TEXT,"Advanced")
+        adv = self.driver.find_element(By.PARTIAL_LINK_TEXT,"Advanced").click()
         adv.click()
 
         time.sleep(2)

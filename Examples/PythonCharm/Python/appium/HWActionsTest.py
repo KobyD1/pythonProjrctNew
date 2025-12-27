@@ -27,10 +27,17 @@ class TestAppium(unittest.TestCase):
 
     def test_calculate_tap(self) :
         print('into test')
-
-
-
-
+        # Find calculator digit buttons
+        digit2 = self.driver.find_element(by=AppiumBy.ID, value='com.android.calculator2:id/digit_2')
+        digit1 = self.driver.find_element(by=AppiumBy.ID, value='com.android.calculator2:id/digit_1')
+        
+        # Create TouchAction object for hardware actions
+        actions = TouchAction(self.driver)
+        actions.tap(digit2)
+        actions.tap(digit1)
+        actions.perform()
+        
+        time.sleep(2)
         print('test stop')
 
 

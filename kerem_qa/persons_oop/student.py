@@ -1,4 +1,4 @@
-from persons_oop.person import Person
+from kerem_qa.persons_oop.person import Person
 
 
 class Student(Person):
