@@ -1,4 +1,7 @@
+import allure
 from selenium.webdriver.common.by import By
+
+from kerem_qa.primark_project_withAllure.pages.locetors import MainPageLocators
 
 
 class MainPage:
@@ -7,7 +10,7 @@ class MainPage:
 
 
     def serach_for_item(self,item="Shoes"):
-        self.driver.find_element(By.ID,"search-field").click()
+        self.driver.find_element(*MainPageLocators.SEARCH_FIELD).click()
         search = self.driver.find_element(By.ID,"search-field").click()
 
         search.clear()
@@ -20,7 +23,12 @@ class MainPage:
         return button_text
 
     def click_on_cart_button(self):
-        self.driver.find_element(By.ID,"shopping-bag-link").click()
+
+            self.driver.find_element(By.ID,"shopping-bag-link").click()
+
+    def get_and_verify_products_prices(self,price):
+        pass
+
 
 
 
