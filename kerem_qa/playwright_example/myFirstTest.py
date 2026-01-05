@@ -7,6 +7,6 @@ with sync_playwright() as p:
     search.click()
     search.clear()
     search.fill("Phone")
-    assert page.title() == "Electronics, Cars, Fashion, Collectibles, Coupons and More  | eBay"
+    assert page.title() == "Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay"
 
     browser.close()
