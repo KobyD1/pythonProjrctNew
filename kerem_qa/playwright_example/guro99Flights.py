@@ -17,4 +17,5 @@ with sync_playwright() as p:
 
     from_dropdown = page.locator("[name='fromPort']")
     from_dropdown.select_option("Paris")
+    from_dropdown.select_option(index=1)
     print ("test end")
