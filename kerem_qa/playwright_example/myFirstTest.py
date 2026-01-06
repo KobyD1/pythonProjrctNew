@@ -5,8 +5,9 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
     page.goto("http://www.ebay.com")
-    assert page.title() == "Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay"
+    expect(page).to_have_title("Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay")
 
+    assert page.title()== r"Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay"
     search = page.locator('#gh-ac')
     search.click()
     search.clear()
