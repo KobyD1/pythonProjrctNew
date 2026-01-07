@@ -1,4 +1,5 @@
 from kerem_qa.playwright_example.pages.login_page import loginPage
+import time
 
 
 class TestLogin():
@@ -28,7 +29,14 @@ class TestLogin():
     def test_get_products_prices_to_excel(self,setup_playwright_swaglabs):
         page ,login_page, product_page,excel_utils = setup_playwright_swaglabs
         login_page.login("standard_user","secret_sauce")
-        product_page.verify_product_prices()
+        prices = product_page.verify_and_get_product_prices()
+        current_seconds = int(time.time())
+
+        path = F"C:/Users/dkdk1/PycharmProjects/pythonProjrctNew/kerem_qa/excel/prices_{current_seconds}.csv"
+        excel_utils.set_excel_data(self,prices, path)
+        excel_data = excel_utils.get_excel_row_data(self,1, path)
+        excel_data.remove('Price')
+        assert prices == excel_data, "data did not read from  excel as wrote"
 
 
 
