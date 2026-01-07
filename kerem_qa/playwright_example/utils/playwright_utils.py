@@ -15,6 +15,7 @@ class PlaywrightUtils:
 
     def is_button_exists(self,element):
         try:
+            print ("try to click in element")
             element.click()
             return True
         except Exception as e:
