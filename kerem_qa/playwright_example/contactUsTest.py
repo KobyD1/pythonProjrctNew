@@ -8,6 +8,23 @@ with sync_playwright() as p:
     # contact_us.click()
     category = page.locator("[name='categoryListboxContactUs']")
     category.select_option(index=1)
+    email = page.locator("[name='emailContactUs']")
+    email.fill("abc@abc.com")
+    subject  = page.locator("[name='subjectTextareaContactUs']")
+    subject.fill("Hi , pleas provide details")
+    send= page.locator("[id='send_btn']")
+    send.click()
+    continue_button = page.get_by_text("CONTINUE SHOPPING")
+
+    text = continue_button.all_inner_texts()
+    assert "CONTINUE SHOPPING" in text[0],"text is not as expected into continue button "
+    continue_button.click()
+    is_pass = not (continue_button.is_visible())
+    assert is_pass, "conitue button appears not as expected"
+
+
+
+
 
 
 
