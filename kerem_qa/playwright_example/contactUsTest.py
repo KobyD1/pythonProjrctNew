@@ -23,9 +23,4 @@ with sync_playwright() as p:
     assert is_pass, "conitue button appears not as expected"
 
 
-
-
-
-
-
     browser.close()
