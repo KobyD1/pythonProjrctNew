@@ -4,8 +4,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
     page.goto("https://www.saucedemo.com/")
-    # contact_us = page.locator("[href='javascript:void(0)']")
-    # contact_us.click()
+
     user = page.locator("[id='user-name']")
     password = page.locator("[id='password']")
     user.fill("standard_user")

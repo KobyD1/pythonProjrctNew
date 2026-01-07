@@ -20,6 +20,10 @@ with sync_playwright() as p:
     text_option_2 = search_button.text_content()
     advanced= page.get_by_role("Link",name="Advanced")
     search.click(position={"x": 1300, "y": 15})
+    page.query_selector_all("[class =‘inventory_item_price’]")
+
+
+
 
     # search_button.click()
     print (page.url)
