@@ -10,7 +10,7 @@ Feature: Calculator - Add
     Then get the numbers summery results
 
     @Sanity
-    Scenario: Adding action for positive numbers
+    Scenario: Adding action for negative numbers
       When set first number
       When set third number
       Then get the numbers summery results

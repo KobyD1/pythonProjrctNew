@@ -1,12 +1,8 @@
-import allure
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.by import By
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from kerem_qa.selenium_example.seleniumBaseDalya import seleniumBaseDalya
 from kerem_qa.primark_project_withAllure.pages.locetors import MainPageLocators
-from kerem_qa.primark_project_withAllure.pages.locetors import CartPageLocetors
 
 
 

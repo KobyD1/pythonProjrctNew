@@ -19,7 +19,7 @@ class myFirstPytest(unittest.TestCase):
         summery = self.num1 + self.num2
 
 
-        assert summery==5,"our code did not suport summery "
+        assert summery==9,"our code did not suport summery "
         result=summery*2
         print (result)
 

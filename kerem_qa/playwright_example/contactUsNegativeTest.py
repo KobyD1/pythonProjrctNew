@@ -12,7 +12,7 @@ with sync_playwright() as p:
     category = page.locator("[name='categoryListboxContactUs']")
     category.select_option(index=1)
     is_name_exist = playwright_utils.is_button_exists(page.locator("[name='emailContactUsdddddd']"))
-
+    assert not is_name_exist
 
     subject  = page.locator("[name='subjectTextareaContactUs']")
     subject.fill("Hi , pleas provide details")
