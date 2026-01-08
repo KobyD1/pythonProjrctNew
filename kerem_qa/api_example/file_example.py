@@ -12,7 +12,6 @@ headers = {'Content-Type':'application/json'}
 f = open('data/user_data.json')      # Opening JSON file
 data_from_file = json.load(f)  # returns JSON as object
 
-# data = json.dump(open("data/user_data.json"))
 
 
 response = requests.post(url_base+'user',headers=headers, data=data_from_file)
