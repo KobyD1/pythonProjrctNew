@@ -1,4 +1,3 @@
-from selectors import SelectSelector
 
 
 def age_calculator(age):
