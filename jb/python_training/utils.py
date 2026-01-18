@@ -22,3 +22,18 @@ class Utils_jb61:
 
     def send_mails(self):
         print ("sending mails")
+
+    def find_digits_summery(self,num):
+        l=len(str(num))
+        sum = 0
+        if (l==3):
+            for i in range (l):
+                digit_as_str = str(num)[i]
+                sum= sum+int(digit_as_str)
+            print("3 digit number found")
+
+            return sum
+
+
+
+
