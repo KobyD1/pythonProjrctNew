@@ -11,5 +11,14 @@ class Utils_jb61:
 
         return age_new
 
-    def email_validator(email):
+    def email_validator(self,email):
         print("trying to analyze if email is valid ")
+        if "@" and "." in email:
+            print ("email is valid")
+            return True
+        else:
+            print ("email is not valid")
+            return False
+
+    def send_mails(self):
+        print ("sending mails")
