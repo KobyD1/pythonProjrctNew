@@ -10,3 +10,8 @@ class LoginPage():
         password = self.page.locator("#password")
         user.fill(user_text)
         password.fill(password_text)
+
+
+    def click_on_login(self):
+        login = self.page.get_by_text("Login")
+        login.click()
