@@ -1,16 +1,6 @@
+from jb.python_training.utils import Utils_jb61
 
-
-def age_calculator(age,ref_age=18):
-    if age>ref_age:
-        print(f"age is greater than {ref_age}")
-        age_new =age+5
-    else :
-        print(f"age is less than {ref_age}")
-        age_new =age-5
-
-    return age_new
-
-    # staring the code
+# staring the code
 
 user_1 = {
     "first_name": "John",
@@ -28,16 +18,7 @@ user_2 = {
 
 }
 
-age_1 = age_calculator(user_1["age"])
-age_2 = age_calculator(user_2["age"],20)
+utils = Utils_jb61()
+age_1 = Utils_jb61().age_calculator(user_1["age"])
+age_2 = utils.age_calculator(user_2["age"],20)
 print (f"{age_1} and  {age_2}")
-# if user_1["age"] > 18:
-#     print ("age is greater than 18")
-# else:
-#     print ("age is less than 18")
-#
-#
-# if user_2["age"] > 18:
-#     print ("age is greater than 18")
-# else:
-#     print ("age is less than 18")

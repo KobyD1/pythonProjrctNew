@@ -1,7 +1,7 @@
 
 class Utils_jb61:
 
-    def age_calculator(age,ref_age=18):
+    def age_calculator(self,age,ref_age=18):
         if age>ref_age:
             print(f"age is greater than {ref_age}")
             age_new =age+5
