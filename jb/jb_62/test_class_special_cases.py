@@ -6,6 +6,6 @@ class TestClassesExample():
         page = setup_playwright
         page.goto("https://www.saucedemo.com/")
         elements_with_spaces = page.query_selector_all(".input_error.form_input")  # example how to handle spaces in class
-
+        
         elements_partial = page.query_selector_all("[class*=input_error]")
         print ("test end")
