@@ -8,7 +8,6 @@ def setup_playwright(base_url):
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=False)
         page = browser.new_page()
-        # page.goto("https://www.saucedemo.com/")
         yield page
         page.close()
         browser.close()

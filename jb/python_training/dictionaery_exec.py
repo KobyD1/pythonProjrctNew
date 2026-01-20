@@ -22,6 +22,8 @@ utils = Utils_jb61()
 age_1 = Utils_jb61().age_calculator(user_1["age"])
 age_2 = utils.age_calculator(user_2["age"],20)
 is_valid = utils.email_validator("aaaa@dfdd.com")
+is_valid = utils.email_validator("@.")
+
 if is_valid:
     utils.send_mails()
 print (f"{age_1} and  {age_2}")
