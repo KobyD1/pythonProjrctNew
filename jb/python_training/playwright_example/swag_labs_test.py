@@ -9,17 +9,15 @@ with sync_playwright() as playwright:
     user.fill("standard_user")
 
 
-    login_button = user.locator("[name='login-button']")
+    login_button = page.locator("[name='login-button']")
     login_button.click()
 
-
-
-
-
-
-
-
-
+    url = page.url
+    print (F"url: {url}")
+    if url == "https://www.saucedemo.com/":
+        print ("####Test Pass####")
+    else:
+        print ("####Test Fail####")
 
     page.close()
     browser.close()
