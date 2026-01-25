@@ -14,7 +14,7 @@ class TestCalculator():
         page.goto("https://www.calculator.net/")
         payment_button  = page.get_by_role("link", name = "Payment Calculator" )
         payment_button.click()
-        assert page.url == 'https://www.calculator.net/payment-calculator.html', "Payment Page did not loaded after click on BMI button"
+        assert page.url == 'https://www.calculator.net/payment-calculator.html', "Payment Page did not loaded after click on Payment button"
 
 
 
