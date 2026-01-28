@@ -1,7 +1,5 @@
 import unittest
 
-from jb_60.function_example.utils import utils
-
 
 class multipleExample(unittest.TestCase):
 
